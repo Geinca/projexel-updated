@@ -1,0 +1,168 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #2b2b2b;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2b2b2b;
+  min-width: 160px;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #b0c738;
+  color: #2b2b2b;
+}
+
+/* 👇 This makes the dropdown appear when hovering the dropdown container */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+
+
+
+  
+  /* General Styles for About Sections */
+/* General Layout */
+.about-section {
+  display: none; /* Hide sections by default */
+}
+
+.about-section.active {
+  display: block; /* Show the active section */
+  /* animation: fadeIn 1s ease-in-out; Apply fade-in animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style for the Horizontal Cards */
+.horizontal-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.card-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card-content {
+  max-width: 60%;
+  padding-left: 20px;
+}
+
+.card-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Animation Classes */
+.animate-fade-in-left {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 1s ease-out;
+}
+
+/* Fade-in from left */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in from bottom */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .horizontal-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .card-image,
+  .card-content {
+    padding: 0;
+    flex: 1 1 100%;
+  }
+
+  .card-content {
+    padding-top: 15px;
+  }
+
+  .card-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .card-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}

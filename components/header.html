@@ -1,0 +1,90 @@
+<!-- Sub-navbar -->
+<div class="sub-navbar">
+  <div class="sub-left">
+    <a href="index.html">
+      <img src="/image/logo1.jpg" alt="ServiceCo Logo" class="sub-logo" />
+    </a>
+    <div class="contact-details">
+
+      <div style="display: flex; align-items: center;">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <span>Send Mail Us</span>
+          <a href="mailto:info@serviceco.com">mailto:info@serviceco.com</a>
+        </div>
+      </div>
+
+      <span><i class="fas fa-phone"></i> Call Us 24/7 :<br /> +123 456 7890</span>
+      <span><i class="fas fa-map-marker-alt"></i> Address :<br /> 123 Service Street,
+        City, Country</span>
+    </div>
+    <!-- <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div> -->
+  </div>
+</div>
+
+<!-- Main Header -->
+<header class="responsive-header">
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="introduction.html" class="dropbtn">
+        About Us <i class="fas fa-chevron-down"></i>
+      </a>
+      <div class="dropdown-content">
+        <a href="introduction.html">Introduction</a>
+        <a href="introduction.html">Our Mission</a>
+        <a href="introduction.html">Our Vision</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="" class="dropbtn">
+        Services <i class="fas fa-chevron-down"></i>
+      </a>
+      <div class="dropdown-content">
+        <a href="javascript:void(0)" onclick="showSection('Manpower-services')">Manpower services</a>
+        <a href="javascript:void(0)" onclick="showSection('Equipment-rental')">Equipment rental</a>
+        <a href="javascript:void(0)" onclick="showSection('Transportation-services')">Transportation services</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact Us</a>
+    <!-- <a href="brochure.html">Brochure</a> -->
+  </nav>
+  <div class="hamburger" onclick="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close-menu" onclick="toggleMobileMenu()">✕</div>
+  <input type="text" placeholder="Search..." />
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+    <a href="introduction.html">
+      About Us <i class="fas fa-chevron-down"></i>
+    </a>
+    <div class="dropdown-content">
+      <a href="#introduction" onclick="showSection('introduction')">Introduction</a>
+      <a href="#mission" onclick="showSection('mission')">Our Mission</a>
+      <a href="#vission" onclick="showSection('vision')">Our Vision</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="javascript:void(0)" onclick="toggleDropdown(this)">
+      Service <i class="fas fa-chevron-down"></i>
+    </a>
+    <div class="dropdown-content">
+      <a href="javascript:void(0)" onclick="showSection('Manpower-services')">Manpower services</a>
+      <a href="javascript:void(0)" onclick="showSection('Equipment-rental')">Equipment rental</a>
+      <a href="javascript:void(0)" onclick="showSection('Transportation-services')">Transportation services</a>
+    </div>
+  </div>
+  <a href="contact.html">Contact Us</a>
+  <!-- <a href="brochure.html">Brochure</a> -->
+</div>
